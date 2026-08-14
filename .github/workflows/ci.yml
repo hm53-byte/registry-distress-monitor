@@ -1,0 +1,24 @@
+name: testovi
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest
+      - name: bez scipy (vlastita izvedba KS testa)
+        run: python -m pytest testovi -q
+      - run: pip install scipy
+      - name: sa scipy
+        run: python -m pytest testovi -q
