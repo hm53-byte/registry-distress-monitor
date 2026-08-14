@@ -36,7 +36,7 @@ import math
 import statistics
 from dataclasses import dataclass
 
-# scipy je opcionalan — koristimo ga za KS test ako postoji, inace pure-NumPy fallback
+# scipy je neobavezan: koristi se za KS test ako postoji, inace vlastita izvedba
 try:
     from scipy import stats as _scipy_stats  # type: ignore[import-not-found]
     _HAS_SCIPY = True
