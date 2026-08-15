@@ -65,8 +65,8 @@ Trud se preselio na unos.
 
 ### 3. Postojeci indeks vec je bio brz
 
-Jedan ciklus predlozio je Bloomov filtar ispred provjere postojanja zapisa i
-izmjerio ubrzanje od 2,8 puta. Provjerom se pokazalo da ubrzanje vrijedi samo
+Predlozen je Bloomov filtar ispred provjere postojanja zapisa i izmjereno je
+ubrzanje od 2,8 puta. Provjerom se pokazalo da ubrzanje vrijedi samo
 za promasaje, a da nad stupcem s jedinstvenim indeksom SQLite vec radi
 dovoljno brzo za ovu kolicinu podataka.
 
